@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<meta charset="utf-8">
+<style>
+body {margin: 0; padding: 0;
+	background-image: url('img/maintheme.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+p, h1, h2, h3, h4 {margin: 0; padding: 0; font-family: 'Josefin Sans', sans-serif;}
+p {font-size: 120%}
+
+#firstbg {margin: 0; padding: 0; 
+	background-image: url('img/bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 1000px;
+}
+#main h3 {
+margin-top: 20px
+}
+
+.choose {
+background-color: white;
+width: 19%;
+display: inline-block;
+border-radius: 5px
+}
+.choose:hover {transition-duration: 0.1s;
+#whole {margin-top: 10px}
+}
+
+@media only screen and (max-width: 650px) {.choose {width: 30%}}
+@media only screen and (max-width: 400px) {.choose {width: 49%}}
+@media only screen and (max-width: 300px) {.choose {width: 50%}}
+@media only screen and (max-width: 1000px) {h2 {font-size: 80%} h1 {font-size: 115%} h3 {font-size: 90%}}
+
+.ans {
+background-color: white;
+border-radius: 10px;
+border: solid 1px black;
+width: 90%;
+margin-top: 20px
+}
+
+#aboutus, #projects, #contact, #price {display: none}
+</style>
+</head>
+
+<body >
+<div id="firstbg">
+<u style="color: white"><h2 style="color: white; margin-left: 20px"><a>Main </a>&nbsp;<a>About us </a>&nbsp;<a>Our projects </a>&nbsp;<a>Price </a>&nbsp;<a>Contact us </a></h2></u>
+<h1 id="title" style="color: white; text-align: right; margin-right: 20px; margin-top: 300px">Quasar - professional web-site developing</h1>
+<h3 style="color: white; text-align: right">Every problem can be solved. The only thing left is to find its solution</h3>
+</div>
+
+<div align="center" style="margin-top: 30px" id="whole">
+<div class="choose"
+onclick="
+document.getElementById('faq').style.display='block';
+document.getElementById('aboutus').style.display='none';
+document.getElementById('projects').style.display='none';
+document.getElementById('price').style.display='none';
+document.getElementById('contact').style.display='none';
+"
+>
+<IMG src="img/main.png" width="100%" style="align: center">
+<h2>
+Main
+</h2>
+</div>
+
+<div class="choose"
+onclick="
+document.getElementById('faq').style.display='none';
+document.getElementById('aboutus').style.display='block';
+document.getElementById('projects').style.display='none';
+document.getElementById('price').style.display='none';
+document.getElementById('contact').style.display='none';
+"
+>
+<IMG src="img/aboutus.jpg" width="100%" style="align: center">
+<h2>
+About us
+</h2>
+</div>
+
+<div class="choose"
+onclick="
+document.getElementById('faq').style.display='none';
+document.getElementById('aboutus').style.display='none';
+document.getElementById('projects').style.display='block';
+document.getElementById('price').style.display='none';
+document.getElementById('contact').style.display='none';
+"
+>
+<IMG src="img/projects.png" width="100%" style="align: center">
+<h2>
+Projects
+</h2>
+</div>
+
+<div class="choose"
+onclick="
+document.getElementById('faq').style.display='none';
+document.getElementById('aboutus').style.display='none';
+document.getElementById('projects').style.display='none';
+document.getElementById('price').style.display='block';
+document.getElementById('contact').style.display='none';
+"
+>
+<IMG src="img/price.jpg" width="100%" style="align: center">
+<h2>
+Pricelist
+</h2>
+</div>
+
+<div class="choose"
+onclick="
+document.getElementById('faq').style.display='none';
+document.getElementById('aboutus').style.display='none';
+document.getElementById('projects').style.display='none';
+document.getElementById('price').style.display='none';
+document.getElementById('contact').style.display='block';
+"
+>
+<IMG src="img/contact.jpg" width="100%" style="align: center">
+<h2>
+Contact us
+</h2>
+</div>
+</div>
+
+<div align="center">
+<div class="ans" align="left">
+
+<div id="faq">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras blandit risus ut dui pharetra, ut vulputate nibh malesuada. Praesent semper ipsum at odio varius accumsan. Morbi diam tortor, pellentesque sit amet interdum non, vestibulum vitae mauris. Donec elementum tempor maximus. Sed dapibus, nulla id iaculis imperdiet, tortor mi venenatis nunc, at tincidunt lectus enim sed sapien. Vivamus tincidunt quis lacus vitae pulvinar. Nulla sit amet erat fringilla nibh blandit placerat sed vel nisi. Curabitur eget diam maximus, porttitor ante vel, lobortis ipsum. Aliquam erat volutpat. Mauris viverra ullamcorper metus sit amet cursus. Integer non nisl dignissim, sagittis dolor vitae, scelerisque arcu. Aenean nunc dui, pretium non mi et, consectetur ullamcorper nibh. Nullam dignissim est ut nulla cursus, id aliquet nunc ullamcorper. Nulla quis molestie mi.</p><p>
+
+Suspendisse fringilla augue at metus tempus, vitae dictum mi tristique. Proin sed justo mi. Mauris a elit pellentesque, commodo nunc rhoncus, interdum risus. Curabitur blandit, libero vitae aliquam vehicula, nulla enim scelerisque lacus, vitae bibendum nibh sapien a neque. Aliquam in erat in risus tincidunt mollis at at orci. Ut vulputate mollis sem, vel ullamcorper ante blandit nec. Proin ac ultricies justo. Donec eleifend tellus nec lacus tristique commodo. Donec porttitor, lorem at facilisis placerat, turpis nisi congue sapien, non sagittis justo metus eget ex. Pellentesque et turpis dui. Pellentesque at scelerisque lacus. Cras quis nibh congue, tempor eros non, aliquet eros. Nullam mattis nulla ultricies purus varius, sed fringilla nulla vulputate.</p><p>
+
+Vivamus commodo elit sed risus tincidunt, eu vulputate metus auctor. Sed eu hendrerit dui, a elementum massa. Fusce mauris massa, porttitor eget semper at, interdum sit amet dolor. Suspendisse malesuada commodo mauris, vel laoreet ex placerat id. Vestibulum est ipsum, dictum sit amet justo eget, rutrum pretium purus. Nulla sit amet ex eros. Pellentesque suscipit augue ex, sit amet vulputate erat viverra quis. Vivamus odio nisi, gravida egestas efficitur condimentum, dapibus ut mi. Cras sit amet elit vitae elit pretium finibus tincidunt nec ante. Curabitur elit sapien, rutrum sed risus nec, rhoncus consequat mauris. Duis at mauris ut urna pulvinar lobortis. Quisque sed imperdiet turpis. In hac habitasse platea dictumst. Integer consectetur diam eget libero auctor, et luctus lorem mattis. Quisque finibus iaculis dolor, suscipit dictum nisi sollicitudin vitae. Aenean sapien lorem, vestibulum in tincidunt eget, lobortis quis odio.</p><p>
+
+Sed vel elit eget nulla ultricies sagittis. Suspendisse gravida eros eget fringilla eleifend. Praesent ultricies porta magna vel facilisis. Duis porttitor nec massa non bibendum. In metus magna, faucibus ac dolor sed, iaculis rhoncus dui. Integer lacus lorem, vulputate id quam a, commodo mollis lorem. Curabitur accumsan, augue porta dignissim hendrerit, lectus lacus sollicitudin diam, in sollicitudin sem massa in sapien. Etiam ut feugiat elit. Donec urna ex, vestibulum ac quam vitae, rutrum auctor purus. Aliquam erat volutpat. Donec lectus felis, venenatis vel finibus sed, condimentum id dolor. Duis sed purus massa. Pellentesque facilisis ac dolor et auctor. Pellentesque at erat non lectus egestas tempus.
+</p><p>
+Phasellus convallis turpis et tristique sollicitudin. Pellentesque eu ligula eros. Fusce efficitur magna vitae enim ultricies luctus. Praesent at consequat purus. Mauris gravida augue est, a sollicitudin odio imperdiet in. Cras ultrices libero semper orci consectetur ultrices. Aliquam quis tellus accumsan, mollis magna id, consectetur lorem. Aliquam non maximus nisl. Sed quis urna purus. Vestibulum vulputate orci id metus tristique aliquam. Fusce semper mattis enim vitae lobortis. Sed cursus sodales massa sed fringilla. Nunc cursus cursus enim, a gravida nunc vehicula eget. Morbi arcu velit, congue quis gravida sit amet, eleifend nec justo</p>
+</div>
+
+<div id="aboutus">
+
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+
+<p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+
+<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+</div>
+<div id="projects">
+<h1>Lorem ipsum dolor sit amet qui non congue integer</h1><h2>Eu dictum urna quam sit tortor varius ac ut</h2><p>Lectus cras in aliquam arcu risus. Semper sollicitudin et neque elit egestas ut consectetuer nibh. Et enim quisque sodales massa eget integer nunc libero nunc exercitation quam. Vulputate velit diam. Donec pede eget. Mollis ut posuere. Non ante accumsan et nullam et. Ut montes libero. Lectus in sapien. Non dui arcu. Tristique odio metus. Vitae tellus nec turpis enim lectus nonummy nec arcu. Diam vulputate amet nibh orci congue vehicula mattis tempus blandit placerat lacus libero vel nulla. Quis eu pede. Diam nec ultrices dui vel ea. Fusce eu posuere mauris commodo vitae. Dignissim orci nulla sed a et. Torquent etiam ipsum.</p><h2>Consequat id rhoncus suspendisse adipiscing nulla</h2><p>Aut velit elit vitae vivamus nec suscipit odio tincidunt in mi risus non eros eget vel blandit amet in scelerisque class. Sed augue massa facilisis asperiores vitae neque vel mauris sit nec erat sit velit neque wisi pulvinar volutpat. Vitae laoreet at. Vestibulum nulla mattis. Erat faucibus nisl lacus consequat hic porta aliquet sollicitudin. Non nullam consequat. Et arcu quisque. Urna sed faucibus. Sed vehicula velit nisl assumenda sed. Lectus at odio. Malesuada purus nullam. Mi feugiat arcu vestibulum velit mauris. Euismod justo elit. Lectus ut bibendum nunc voluptatem a. Commodo at pede. Ut consectetuer posuere. Nullam magna quam velit pretium vehicula. Ipsum quis mollis. Eleifend purus libero nisl at a dapibus lectus pellentesque.</p><h2>Molestie suspendisse et</h2><p>Urna alias quis. Augue varius suspendisse purus iaculis quisque. Odio congue rem. Quos ut lectus at turpis feugiat. Lacus eu cras nec venenatis tristique taciti habitasse porta tortor elit lacinia mollis at leo. Ut netus ut. Per cras neque aliquam iaculis adipiscing. Etiam malesuada luctus. Pellentesque bibendum morbi vitae vestibulum mi pulvinar dolor est sed aliquam bibendum. Sit volutpat in sed tempor vitae. Urna imperdiet et. Tortor hendrerit cras dictum turpis venenatis. In leo augue. Cras autem et sed porta et. Sit vestibulum hendrerit faucibus enim nunc. In ac dapibus. Ante varius nunc dictumst vestibulum non. Aliquet ut nullam suscipit erat gravida. At augue vivamus ante nonummy hymenaeos etiam aliquam viverra suspendisse purus habitant integer at sed.</p><p>Diam eget dictum. Neque tortor sit. Tempus suspendisse sed. Varius amet lacinia integer ac eu vulputate praesent porta. Id eget eget. Nec leo porttitor arcu wisi lectus eros montes pellentesque. Ut mollis lacus sagittis quis velit eu euismod id massa.</p>
+</div>
+<div id="price">
+<h1>Lorem ipsum dolor</h1><h2>Sit amet nam</h2><p>Malesuada pede gravida. Integer a dolor. Platea tincidunt nam donec etiam ligula ut proin dui. Fermentum malesuada arcu. Sed sed eleifend ullamcorper est ipsum. Mattis elementum at. Adipiscing in commodo non nam nam ac donec primis phasellus accumsan aliquam. Urna ante donec proin vitae sed egestas suspendisse vestibulum porta est non in magnis urna donec eu mi. Tempus ut blandit urna quam dignissim tortor tincidunt aliquet. In enim mi. Quis lacus magna. Magna pretium proin lorem in in nisl et fringilla. Soluta volutpat dolor.</p><p>Nunc tellus auctor. Phasellus elit sed tortor fermentum enim. Mauris quis luctus lacus nibh torquent massa molestie tortor eu fermentum suspendisse. Posuere sed sed eum ut fusce. Vitae suspendisse dolor. Id a ultricies. Eget euismod eget. Quam sit vel. Rhoncus velit dolor aliquam tristique gravida. Sed a leo. Volutpat amet pede id natoque suspendisse. Enim class vel vitae aute dui a sodales risus quis ut a lectus ac etiam in sit gravida dui eget faucibus. Proin duis curabitur nulla ultrices torquent. Odio elementum maecenas est et suscipit. Lectus sem ut.</p><h2>Luctus enim phasellus nullam dolor ut wisi aliquam nec quam erat volutpat</h2><p>Pellentesque aliquam curabitur nisl enim feugiat. Erat pede amet. Wisi sed viverra. Auctor vestibulum nisl elit vitae orci mauris elit justo. Consequat erat sed. Pulvinar arcu dolor adipiscing varius duis. Luctus duis nec. Non sit placerat nullam viverra nulla maecenas nunc et. Nunc soluta aliquam mauris ac commodo.</p><h2>Fusce sit mauris wisi in amet saepe a donec luctus nunc velit</h2><p>Eros risus lorem. Egestas sit arcu. Ut ipsum sed. Felis ac dignissim neque omnis sed velit ultricies vitae.</p><p>At dignissim turpis libero justo ipsum lacinia ac cursus. Justo sodales morbi. Metus aenean tristique. Lorem elementum egestas. Luctus nibh quam. Nec bibendum amet. Facilisi nunc consectetuer. Diam ut felis nulla enim arcu. Libero ut et nec suspendisse mollis maecenas sed libero. Interdum ipsum sem. Lacinia in lorem. Quam sem arcu. Tincidunt vel velit eros penatibus bibendum. Quisque est nibh libero totam tortor molestie nunc viverra. Augue metus enim sit fringilla wisi arcu sit maecenas sagittis molestie ac. Et velit amet vitae quam tellus ante in nam. Vehicula porta elit vitae aliquet pellentesque. Pede luctus wisi. Mi proin suspendisse. Qui ullamcorper ante. Aliquam fringilla dictumst egestas odio risus eros interdum eos vitae nec eros blandit purus dui non semper dolor. Ac aliquam et lectus tortor vestibulum eget rhoncus ac est.</p>
+</div>
+<div id="contact">
+:)
+</div>
+</div>
+</div>
+<h2>Quasar corproration 2017. All rights reserved</h2>
+<script>
+/*адаптация обложки*/
+var a = $(window).height();
+$("#firstbg").css({'height':a})
+
+$("#title").css({'margin-top':a/3.5})
+
+
+</script>
+<?php
+echo "hello world!";
+>
+</body>
+</html>
