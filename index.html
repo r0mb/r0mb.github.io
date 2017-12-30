@@ -87,10 +87,10 @@ p{display:none;}
 
 
 <script>
-var a = $(window).height();
+var a = document.body.clientHeight;
 $("#entering").css({'margin-top':a/10})
-var b = $(window).width();
-alert(a +  " " + b );
+var b = document.body.clientWidth
+alert(a + " " + b);
 if (b<400) {
 document.getElementById('menu').innerHTML='<a>Start now</a>';
 document.getElementById('menu').style.marginLeft='0';
