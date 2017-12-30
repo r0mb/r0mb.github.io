@@ -1,103 +1,18 @@
-<head>
-	<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
-	<link rel="shortcut icon" href="dice.png" type="image/png">
-	<title>Dice</title>
-	<meta charset="utf-8">
-<STYLE>
-	@font-face {
-			font-family: "CenturyGothicRegular";
-			src: url("../fonts/CenturyGothicRegular/CenturyGothicRegular.eot");
-			src: url("../fonts/CenturyGothicRegular/CenturyGothicRegular.eot?#iefix")format("embedded-opentype"),
-			url("../fonts/CenturyGothicRegular/CenturyGothicRegular.woff") format("woff"),
-			url("../fonts/CenturyGothicRegular/CenturyGothicRegular.ttf") format("truetype");
-			font-style: normal;
-			font-weight: normal;
-	}
-	
-	body {
-			background-image: url('wallpaper.jpg');
-			background-size: cover;
-			background-position: right;
-			background-repeat: no-repeat;
-	}
-	
-	h1, h2, h3, h4, h5, h6, p, u, i {font-family: 'Century Gothic Regular'}
-	#entering h1 {font-size: 200px; margin-bottom: -30px}
-	
-	#entering h3 {font-size: 30px}
-	
-			
-			@media only screen and (max-width: 1200px) {
-			#dc {width: 400px}
-			#entering h1 {font-size: 150px}
-			#entering h3 {font-size: 25px}
-			}
-			}
-			@media only screen and (max-width: 1000px) {
-			#dc {width: 300px}
-			#entering h1 {font-size: 125px}
-			#entering h3 {font-size: 20px}
-			}
-			@media only screen and (max-width: 800px) {
-			#dc {width: 200px}
-			#entering h1 {font-size: 75px}
-			#entering h3 {font-size: 15px}
-			}
-			@media only screen and (max-width: 400px) {
-			#dc {width: 80px}
-			#entering h1 {font-size: 40px; margin-bottom: 0px}
-			#entering h3 {font-size: 15px; margin-top: -10px}
-			}
-			
-		
-			
-			
-			a:hover {text-decoration: underline; cursor: pointer}
-</STYLE>
-</head>
-<!-- VertexOfVortex, если ты это смотришь, значит хочешь узнать, как замутить сей прелоадер. Вкратце: https://hello-site.ru/preloader/   -->
-
-<style type="text/css">#hellopreloader>
-p{display:none;}
-#hellopreloader_preload {display: block; position: fixed; z-index: 99999; top: 0; left: 0; width: 100%; height: 100%;min-width: 1000px;background: #edf0df url(http://hello-site.ru//main/images/preloads/three-dots.svg) center center no-repeat;background-size:91px;}
-
-</style>
-<div id="hellopreloader"><div id="hellopreloader_preload"></div><p><a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a></p></div>
-<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},500);};</script>
-
-
-<!---->
-<body>
-<DIV id="entering" id="centerfixed">
-<TABLE align="center">
-<TR>
-<TD><IMG SRC="dice2.png" width="500px" id="dc"></TD>
-<TD><H1>DICE</H1><H3>The easiest way of  earning money</H3></TD>
-</TR>
-</TABLE>
-<p style="text-align: center"><IMG src="Transparent_scroll_line.png" width="100%" style="margin-top: -40px" id="k"></p>
-<h2 align="center" style="margin-left: 40px" id="menu">
-		<a>About</a>&nbsp; &nbsp; &nbsp;
-		<a id="opt">Stats</a>&nbsp; &nbsp; &nbsp;
-		<a style="font-size: 140%">Start now</a>&nbsp; &nbsp; &nbsp;
-		<a id="opti">FAQ</a>&nbsp; &nbsp; &nbsp;
-		<a>Contacts</a>&nbsp; &nbsp; &nbsp;
-		</h2>
-</DIV>
-
-
+<script src="dev\device.js"></script>
 <script>
-var a = document.body.clientHeight;
-$("#entering").css({'margin-top':a/10})
-var b = document.body.clientWidth
-alert(a + " " + b);
-if (b<400) {
-document.getElementById('menu').innerHTML='<a>Start now</a>';
-document.getElementById('menu').style.marginLeft='0';
-} else 
-if (b<700) {
-document.getElementById('menu').innerHTML='<a>About</a>&nbsp;&nbsp;<a style="font-size: 120%">Start now</a>&nbsp;&nbsp;<a>Contacts</a>';
-document.getElementById('menu').style.marginLeft='25px';
-};
+if(device.desktop()) alert('ПК');
+if(device.tablet()) alert('Планшет');
+if(device.mobile()) alert('Смартфон');
+//Ориентация экрана
+if(device.landscape()) alert('Альбомная (в ширину)');
+if(device.portrait()) alert('Портретная (в высоту)');
+//ОС устройства
+if(device.ios()) alert('iOS');
+if(device.ipad()) alert('ipad');
+if(device.iphone()) alert('iphone');
+if(device.ipod()) alert('ipod');
+if(device.android()) alert('android');
+if(device.windows()) alert('windows');
+if(device.blackberry()) alert('blackberry');
+if(device.fxos()) alert('fxos');
 </script>
-</body>

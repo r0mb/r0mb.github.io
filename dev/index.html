@@ -1,0 +1,42 @@
+<script src="jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="device.js" type="text/javascript"></script>
+
+<!--
+Скрипт позволяет определить тип устройства (ПК, телефон, планшет), его ориентацию и ОС
+Для использования подключить device.js и применять ниже
+Пример создан сайтом http://blogjquery.ru/skript-device-js-pomogayushhij-opredelit-tip-ustrojstva-ego-orientaciyu-i-os/
+-->
+
+<script>
+//Тип устройства
+if(device.desktop()) alert('ПК');
+if(device.tablet())  alert('Планшет');
+if(device.mobile())  alert('Смартфон');
+
+//Ориентация экрана
+if(device.landscape())  alert('Альбомная (в ширину)');
+if(device.portrait())  alert('Портретная (в высоту)');
+
+//ОС устройства
+if(device.ios())  alert('iOS');
+if(device.ipad())  alert('ipad');
+if(device.iphone())  alert('iphone');
+if(device.ipod())  alert('ipod');
+if(device.android())  alert('android');
+if(device.windows())  alert('windows');
+if(device.blackberry())  alert('blackberry');
+if(device.fxos())  alert('fxos');
+/* Еще ОС
+Android Phone	device.androidPhone()
+Android Tablet	device.androidTablet()
+BlackBerry Phone	device.blackberryPhone()
+BlackBerry Tablet	device.blackberryTablet()
+Windows Phone	device.windowsPhone()
+Windows Tablet	device.windowsTablet()
+Firefox OS Phone	device.fxosPhone()
+Firefox OS Tablet	device.fxosTablet()
+MeeGo	device.meego()
+Television	device.television()
+*/
+</script>
+
