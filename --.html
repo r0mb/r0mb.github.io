@@ -72,7 +72,7 @@ p{display:none;}
 <TABLE align="center">
 <TR>
 <TD><IMG SRC="dice2.png" width="500px" id="dc"></TD>
-<TD><H1>DICE</H1><H3>The easiest way of  earning money</H3></TD>
+<TD><H1 id="hh1">DICE</H1><H3 id="hh3">The easiest way of  earning money</H3></TD>
 </TR>
 </TABLE>
 <p style="text-align: center"><IMG src="Transparent_scroll_line.png" width="100%" style="margin-top: -40px" id="k"></p>
@@ -85,19 +85,29 @@ p{display:none;}
 		</h2>
 </DIV>
 
-
+<script src="dev\device.js"></script>
 <script>
 var a = document.body.clientHeight;
-$("#entering").css({'margin-top':a/10})
-alert(a + " " + b);
-var b = document.body.clientWidth
-if (b<400) {
-document.getElementById('menu').innerHTML='<a>Start now</a>';
-document.getElementById('menu').style.marginLeft='0';
-} else 
-if (b<700) {
-document.getElementById('menu').innerHTML='<a>About</a>&nbsp;&nbsp;<a style="font-size: 120%">Start now</a>&nbsp;&nbsp;<a>Contacts</a>';
-document.getElementById('menu').style.marginLeft='25px';
+$("#entering").css({'margin-top':a/6})
+
 };
+//----------------
+if(device.mobile()) {
+	if (device.landscape()) {
+	document.getElementById('dc').style.width='120px';
+	document.getElementById('hh1').style.fontSize='50px';
+	document.getElementById('hh3').style.fontSize='20px';
+	document.getElementById('hh1').style.marginBottom='0px';
+	document.getElementById('hh3').style.marginTop='-10px';
+	}
+	else
+	{
+	document.getElementById('dc').style.width='80px';
+	document.getElementById('hh1').style.fontSize='40px';
+	document.getElementById('hh3').style.fontSize='15px';
+	document.getElementById('hh1').style.marginBottom='0px';
+	document.getElementById('hh3').style.marginTop='-10px';
+	}
+}
 </script>
 </body>
