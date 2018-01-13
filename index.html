@@ -1,10 +1,77 @@
-<script src="dev\device.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+Текст:<input type="text" id="entertext"><br><br>
+Формат:
+<select id="formatus">
+<option>h1</option>
+<option>h2</option>
+<option>h3</option>
+<option>h4</option>
+<option>h5</option>
+<option>h6</option>
+<option>h7</option>
+<option>p</option>
+</select>
+<br>
+Размер:<input type="number" id="pxsize"><br><br>
+Цвет: <input type="color" id="color"><br><br>
+Шрифт: <select id="font">
+  <option >Arial, Helvetica, sans-serif</option>
+  <option >Arial Black, Gadget, sans-serif</option>
+  <option >Comic Sans MS, cursive</option>
+  <option >Courier New, Courier, monospace</option>
+  <option >Georgia, serif</option>
+  <option >Impact, Charcoal, sans-serif</option>
+  <option >Lucida Console, Monaco, monospace</option>
+  <option >Lucida Sans Unicode, Lucida Grande, sans-serif</option>
+  <option >Palatino Linotype, Book Antiqua, Palatino, serif</option>
+  <option >Tahoma, Geneva, sans-serif</option>
+  <option >Times New Roman, Times, serif</option>
+  <option >Trebuchet MS, Helvetica, sans-serif</option>
+  <option >Verdana, Geneva, sans-serif</option>
+  <option >Symbol</option>
+  <option >Webdings</option>
+  <option >Wingdings, Zapf Dingbats</option>
+  <option >MS Sans Serif, Geneva, sans-serif</option>
+  <option >MS Serif, New York, serif</option>
+</select>
+<button onclick="alpha();">Show</button>
+<div id="res">Result</div>
+<div style="border: solid 1px black; width: 400px" >
+<H1>CODE</H1>
+<p id="code"></p>
+</div>
 <script>
-if(device.desktop()) alert('ПК');
-if(device.tablet()) alert('Планшет');
-if(device.mobile()) alert('Смартфон');
-//Ориентация экрана
-if(device.landscape()) alert('Альбомная (в ширину)');
-if(device.portrait()) alert('Портретная (в высоту)');
+var programme = [];
+var prReader;
 
+var text;
+var textmassive = [];
+
+var alpha = function () {
+console.log(document.getElementById('entertext').value + "-текст; " + 
+document.getElementById('formatus').value + "-формат; " + 
+document.getElementById('pxsize').value + "-размер; " + 
+document.getElementById('color').value + "-цвет; " +
+document.getElementById('font').value + "-шрифт ") 
+
+		var wholeResult = '<' + document.getElementById('formatus').value +
+		' style="font-family:' + document.getElementById('font').value + '; font-size: ' +
+		document.getElementById('pxsize').value + 'px; color:' + document.getElementById('color').value + '">'
+		 + document.getElementById('entertext').value + '</' + document.getElementById('formatus').value + '>';
+		programme.push(wholeResult);
+		prReader = programme.join(" ");
+		
+document.getElementById('res').innerHTML=prReader;
+console.log(wholeResult);
+
+
+text = 	"&#60;" + document.getElementById('formatus').value +
+		" style= &#34; font-family:" + document.getElementById('font').value + "; font-size: " +
+		document.getElementById('pxsize').value + "px; color:" + document.getElementById('color').value + "&#34; 	&#62;"
+		 + document.getElementById('entertext').value + "	&#60;/" + document.getElementById('formatus').value + "	&#62;";
+		 
+textmassive.push(text);
+
+document.getElementById('code').innerHTML=textmassive.join("  ");
+ };
 </script>
