@@ -46,9 +46,15 @@ document.getElementById("35").innerHTML="Ветви направлены вни�
              }
 
                         if (x1==undefined) {
-						ymorezer="любом знач. x";
-						ylesszer="не может быть"
+							if (a>0) {
+								ymorezer="любом знач. x";
+								ylesszer="не может быть"} else {
+								ymorezer="не может быть";
+								ylesszer="любом знач. x"
+								}
+							
                         }
+						
 
 document.getElementById("4").innerHTML="Y<0 " + ylesszer + ". Y>0 при " + ymorezer;
 
