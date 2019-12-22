@@ -1,0 +1,77 @@
+			
+			html {
+			   background: url(bg.jpg) no-repeat center center fixed;
+			   -webkit-background-size: cover;
+			   -moz-background-size: cover;
+			   -o-background-size: cover;
+			   background-size: cover;
+			   font-family: 'Cormorant Garamond', serif;
+			   margin: 0;
+			   padding: 0;
+			   
+			}
+			
+			/*https://avatars.mds.yandex.net/get-pdb/1766868/04a07937-003e-4d51-aed5-159e9af5ba95/s1200?webp=false*/
+			nav {
+				margin-top: -1%;
+			    background-color: #FFFFE0;
+			}
+			
+			/* убираем отступы и поля, а также list-style для "ul", 
+			 * и добавляем "position:relative" */
+			nav ul {
+			    padding:0;
+			    margin:0;
+			    list-style: none;
+			    position: relative;
+			    }
+			
+			/* применяем inline-block позиционирование к элементам навигации */
+			nav ul li {
+			    margin: 0px -7px 0 0;
+			    display:inline-block;
+			    background-color: #FFFFE0;
+			    }
+			
+			/* стилизуем ссылки */
+			nav a {
+			    display:block;
+			    padding:0 10px;
+			    color: black;
+			    font-size:20px;
+			    line-height: 60px;
+			    text-decoration:none;
+			}
+			
+			/* изменяем цвет фона при наведении курсора */
+			nav a:hover {
+			    background-color: #FFFACD;
+		}
+		a {color:black}
+		a:hover {text-decoration: underline}
+		#lang {
+			float:right
+		}
+		
+		.prof {
+		overflow: auto;
+		margin-left: 10%;
+		margin-top: 40px;
+		width: 80%;
+		height: 60%;
+		border: solid 1px black;
+					   background: url('https://avatars.mds.yandex.net/get-pdb/1766868/04a07937-003e-4d51-aed5-159e9af5ba95/s1200?webp=false') no-repeat center center fixed;
+			   -webkit-background-size: cover;
+			   -moz-background-size: cover;
+			   -o-background-size: cover;
+			   background-size: cover;
+		}
+		
+		.img {
+		float: left;
+		width: 28%;
+		height: 100%;
+		border: solid 0px black;
+		}
+		b {font-size: 1.4em}
+		.nikola b {font-size: 1.5em}
