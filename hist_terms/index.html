@@ -1,4 +1,5 @@
 <head>
+<script src="library.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <style>
 			nav {
@@ -37,7 +38,7 @@
 			    background-color: #ffd8bd;
 		}
 #main {max-width: 70%}
-.answ {background-color:#fcefe8}
+.answ {background-color:#fcefe8; cursor: pointer; font-family: 'Roboto', sans-serif;}
 
 .answ:hover {background-color:#ffd8bd}
 html {
@@ -58,12 +59,99 @@ html {
 			        <li><a href="apply.html">Термины</a></li>
 			    </ul>
 </nav>
-<h1 style="font-size:3vw;">0:52</h1>
-<div class="quest" style=""><h1 id="main" style="font-size:3vw;">Законодательный акт Петра I (1721 г.) о реформе церковного управления. Согласно ему церковь подчинялась государству, а вместо патриаршества учреждался Синод</h1></div>
+<div class="answ" id="start_button" ><h2 onclick="start();" style="font-size:2vw;">Начать</h2></div>
+<div id="mainpart">
+<h1 style="font-size:3vw;" id="timer">59</h1>
+<div class="quest" style=""><h1 id="main_question_field" style="font-size:3vw;">qu</h1></div>
 <div style="max-width:70%">
-<div class="answ"><a class="ans"><h2 style="font-size:2vw;">Духовный регламент</h2></a></div>
-<div class="answ"><a class="ans"><h2 style="font-size:2vw;">Манифест о вольности дворянства</h2></a></div>
-<div class="answ"><a class="ans"><h2 style="font-size:2vw;">Наказ</h2></a></div>
+
+<div class="answ"><h2 onclick="ans_func(this);" id="0" style="font-size:2vw;">a1</h2></div>
+<div class="answ"><h2 onclick="ans_func(this);" id="1" style="font-size:2vw;">a2</h2></div>
+<div class="answ"><h2 onclick="ans_func(this);" id="2" style="font-size:2vw;">a3</h2></div>
+<div class="answ" style=" max-width: 20%"><h3 onclick="return_back();" style="font-size:1vw;">-Вернуться-</h3></div>
 </div>
+</div>
+<div class="answ" id="finish_res_div"><h1 id="finish_res" style="font-size:2vw;">Результат</h1>
+<h1 style="font-size:2vw;">Начать заново</h1>
+</div>
+
 </center>
+<script>
+document.getElementById("mainpart").style.visibility="hidden"
+document.getElementById("finish_res_div").style.visibility="hidden"
+function start() {
+document.getElementById("mainpart").style.visibility="visible"
+document.getElementById("start_button").style.display="none"
+
+game();
+}
+
+
+timerInterval = setInterval(function () {}, 1000)
+function game() {
+var time = 60;
+timer_interval = setInterval(function minus_seconds() {if (time>1) {time--;
+document.getElementById("timer").innerHTML=time;} else {clearInterval(timer_interval);
+finish();} 
+}, 1000)
+
+}
+
+function finish() {
+document.getElementById("mainpart").style.display="none"
+document.getElementById("finish_res").innerText="Результат: " + right + "/" + total + "."
+document.getElementById("finish_res").style.visibility="visible"
+}
+
+
+//----------------
+
+//----------------
+
+
+function new_question() {
+quest_choice();
+document.getElementById('main_question_field').innerText=data_termin
+console.log(main__random)
+if (main__random == 0) {
+document.getElementById('0').innerText=data;
+document.getElementById('1').innerText=r_data_1;
+document.getElementById('2').innerText=r_data_2;
+}
+if (main__random == 1) {
+document.getElementById('0').innerText=r_data_1;
+document.getElementById('1').innerText=data;
+document.getElementById('2').innerText=r_data_2;
+}
+if (main__random == 2) {
+document.getElementById('0').innerText=r_data_1;
+document.getElementById('1').innerText=r_data_2;
+document.getElementById('2').innerText=data;
+}
+}
+new_question();
+
+var total = 0
+var right = 0
+
+function ans_func(obj) {
+total++;
+if (obj.id==main__random) {
+right++;
+document.getElementById(obj.id).style.backgroundColor="#b3ffb3"
+setTimeout(function backchange() {document.getElementById(obj.id).style.backgroundColor="#fcefe8"; new_question()}, 100)
+
+} else {document.getElementById(obj.id).style.backgroundColor="#ff6666"
+setTimeout(function backchange() {document.getElementById(obj.id).style.backgroundColor="#fcefe8"; new_question()}, 100)}}
+
+
+function return_back() {
+new_question();
+document.getElementById("mainpart").style.visibility="hidden"
+document.getElementById("start_button").style.display="block"
+clearInterval(timer_interval)
+time=60
+document.getElementById("timer").innerHTML=time;
+}
+</script>
 </body>
