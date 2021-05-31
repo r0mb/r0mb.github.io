@@ -87,19 +87,15 @@ height: 25px;
 <br>
 <div class="table-responsive"><table>
 	<tbody>
-		<tr>
-			<td><center><h1 class="t" style="color: green">ВЕРНО</h1></center></td>
-			<td><center><h1 class="t" style="color: red">НЕВЕРНО</h1></center></td>
-		</tr>
-		<tr>
-			<td><center><h1 class="t" style="color: green" id="correct_ans">0</h1></center></td>
-			<td><center><h1 class="t" style="color: red" id="incorrect_ans">0</h1></center></td>
-		</tr>
+
 		<tr>
 			<td colspan="2"><center><h2>ВЕРНЫХ ОТВЕТОВ:</h2></center></td>
 		</tr>
 		<tr>
-			<td colspan="2"><center><h1 id="percentage"></h1></center></td>
+			<td colspan="2"><center><h1 id="correct_ans"></h1></center></td>
+		</tr>
+		<tr>
+			<td colspan="2"><center><img src="https://i.ytimg.com/an/vsdQrg8SkOvS2WiVXA5S4A/featured_channel.jpg?v=544a3d4e"></center></td>
 		</tr>
 	</tbody>
 </table></div>
@@ -150,10 +146,8 @@ document.getElementById("percentage").innerHTML=(correct_ans/(correct_ans+incorr
 function incorrect() {
 alert("Неверно, правильный ответ: "  + quest)
 document.getElementById("main").innerHTML=""
-restart()
-incorrect_ans=incorrect_ans+1
-document.getElementById("incorrect_ans").innerHTML=incorrect_ans
-document.getElementById("percentage").innerHTML=(correct_ans/(correct_ans+incorrect_ans)).toFixed(2)*100+"%"
+
+alert("ИГРА ОКОНЧЕНА. Ваш счет: " + correct_ans + " правильных ответов.")
 }
 
 console.log(quest)
