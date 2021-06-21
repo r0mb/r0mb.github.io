@@ -1,89 +1,100 @@
 <html>
 <head>
-     <meta charset="utf-8">
-      <title>Название страницы</title>
-      <link rel="stylesheet" type="text/css" href="style.css"> 
-	  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+
+<style>
+@font-face {
+font-family: 'Forum';
+src: url("Forum-Regular.ttf") format("truetype");
+font-style: normal; 
+font-weight: normal; 
+}
+
+body {
+background: linear-gradient(45deg, rgb(207,205,212), rgb(255,255,255));
+}
+
+<!--МЕНЮ-->
+#main_menu, #second_menu {font-family:'Forum'}
+
+#main_menu {
+	width: 80%;
+	background-color: rgb(235,234,239);
+}
+
+#second_menu {
+	width: 90%;
+	margin-top: 0.2%;
+	background-color: rgb(235,234,239);
+}
+				
+
+#main_menu ul, #second_menu ul {
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+}
+				
+			
+#main_menu ul li {
+	margin: 0px -7px 0 0;
+	display:inline-block;
+	width: 24%;
+	background-color: rgb(235,234,239);
+}
+
+#second_menu ul li {
+	margin: 0 0px 0 0;
+	display:inline-block;
+	width: 13%;
+	background-color: rgb(235,234,239);
+}
+
+#main_menu a, #second_menu a {
+	display:block;
+	padding:0 10px;
+	color:#000000;
+	font-size: 20px;
+	text-decoration:none;
+}
+#main_menu a {margin-right: 3px;}
+			
+#main_menu a:hover, #second_menu a:hover {
+
+	text-decoration: underline;
+	border: solid 1px black;
+}
+<!--/МЕНЮ-->
+
+</style>
+
 </head>
+<!---------->
 <body>
+<center>
 
-<div id="main">
 
-<h1 style="font-size: 4em">Раскрѣпощеніе</h1>
-<nav>
-			    <ul>
-			        <li><a href="main.html">Главная</a></li>
-			        <li><a href="profile.html">Профиль</a></li>
-			        <li><a href="apply.html">Заявки</a></li>
-			        <li><a href="messages.html">Пишутъ къ вамъ</a></li>
-					<li><a href="dev.html">Разработчики</a></li>
-			    </ul>
+<nav id="main_menu">
+	<ul>
+		<li><a href="#">Главная</a></li>
+		<li><a href="#">Кабинет</a></li>
+		<li><a href="#">Материалы</a></li>
+		<li><a href="#">Контакты</a></li>
+	</ul>
 </nav>
 
+<nav id="second_menu">
+	<ul>
+		<li><a href="#">4</a></li>
+		<li><a href="#">9</a></li>
+		<li><a href="#">10</a></li>
+		<li><a href="#">11</a></li>
+		<li><a href="#">12</a></li>
+		<li><a href="#">14</a></li>
+		<li><a href="#">15</a></li>
+	</ul>
+</nav>
 
-<div class="prof">
-<div class="img">
-<img src="https://i.pinimg.com/736x/3f/95/b0/3f95b093ac3c09acfd7e3d2b948f190e--victorian-art-victorian-ladies.jpg" id="main2" style="height: 100%; width: 100%">
-</div>
-<div style="margin-left: 40px">
-<h1 style=""><a href="">Анна ​Одинцова​, 28</a></h1>
-<h1 style="">Обо мнѣ:</h1>
-<b>•Обращаться только какъ Анна Сергѣевна </b><br>
-<b>•28, считаю себя старухой</b><br>
-<b>•открыта ко всему новому</b><br>
-<b>•зачѣмъ природа, когда ​ѣсть​ комфортъ и роскошь...</b><br>
-<b>•готова выйти за богатаго старика </b><br>
-<b>•отлично распоряжаюсь владѣніемъ </b><br>
-<b>•Инстаграмъ: odin_tsovaa</b>
-
-
-<div style="width:55%; height: 30%; float:right; margin-left: 14%">
-<img id="1" style="max-height: 100%; max-width: 18%" src="anna.png" onclick="openn(this);">
-<img id="3" style="max-height: 100%;  max-width: 18%" src="https://сезоны-года.рф/sites/default/files/images/shkolnikam/Ekaterina_Lokteva_2.jpg" onclick="openn(this);">
-<img id="4" style="max-height: 100%;  max-width: 18%" src="https://i.pinimg.com/736x/3f/95/b0/3f95b093ac3c09acfd7e3d2b948f190e--victorian-art-victorian-ladies.jpg" onclick="openn(this);">
-</div>
-
-</div>
-</div>
-
-<div class="prof">
-<div class="img">
-<img src="katya.png" id="main2" style="height: 100%; width: 100%">
-</div>
-<div style="margin-left: 40px">
-<h1 style=""><a href="">Екатерина Локтева, 20</a></h1>
-<h1 style="">Обо мнѣ:</h1>
-<b>•умна и добра, чего же болѣ?</b><br>
-<b>•люблю размышлять о всякомъ</b><br>
-<b>•не люблю перемѣны</b><br>
-<b>•обожаю природу</b><br>
-<b>•недурно играю на фортепіано</b><br>
-<b>•подробнѣе разскажу о себѣ въ письмахъ, а то слишкомъ много вокругъ развелось нигилистов</b><br><br><br>
-<b><i>Пользователь не предоставилъ дополнительныхъ фотокарточекъ</i></b>
-
-
-</div>
-</div>
-
-
-<div class="prof">
-<div class="img">
-<img src="fenya.png" id="main2" style="height: 100%; width: 100%">
-</div>
-<div style="margin-left: 40px">
-<h1 style=""><a href="">Феодосья Николаевна, 23</a></h1>
-<h1 style="">Обо мнѣ:</h1>
-<b>•недавно получила вольную</b><br>
-<b>•живу тихо и скромно</b><br>
-<b>•люблю дѣтей</b><br>
-<b>•люблю порядокъ во ​всѣмъ​</b><br>
-<br><br><br>
-<b><i>Пользователь не предоставилъ дополнительныхъ фотокарточекъ</i></b>
-
-
-</div>
-</div>
-</div>
-<script src="script.js"></script>
+</center>
 </body>
 </html>
