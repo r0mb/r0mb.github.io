@@ -44,7 +44,7 @@ background: linear-gradient(45deg, rgb(207,205,212), rgb(255,255,255));
 #main_menu ul li {
 	margin: 0px -7px 0 0;
 	display:inline-block;
-	width: 24%;
+	width: 33%;
 	background-color: rgb(235,234,239);
 }
 
@@ -69,6 +69,53 @@ background: linear-gradient(45deg, rgb(207,205,212), rgb(255,255,255));
 	text-decoration: underline;
 	border: solid 1px black;
 }
+
+<!--настройка второго меню-->
+
+ #second_small_menu {font-family:'Forum'}
+
+
+
+#second_small_menu {
+	width: 33%;
+	background-color: rgb(235,234,239);
+	border: solid 1px rgb(235,234,239);
+	border-radius: 10px;
+	margin-top: 0.4%;
+}
+				
+
+#second_small_menu ul {
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+}
+
+#second_small_menu ul li {
+	margin: 0 0px 0 0;
+	display:inline-block;
+	width: 20%;
+	background-color: rgb(235,234,239);
+}
+
+#second_small_menu a {
+	display:block;
+	padding:0 10px;
+	color:#000000;
+	font-size: 200%;
+	text-decoration:none;
+}
+
+			
+#second_small_menu a:hover {
+
+	text-decoration: underline;
+	border: solid 1px black;
+}
+
+<!--конец настройки второго меню-->
+
 
 #chosen {
 border:solid 1px black;
@@ -121,6 +168,17 @@ width: 10%;
     color: #fff; 
 	width: 100%;
    }
+   
+   
+   
+   
+#second_small_menu {display: none}
+#second_menu {display: table}
+
+@media screen and (max-width: 600px) {
+#second_small_menu {display: block}
+#second_menu {display: none}
+}   
 </style>
 
 </head>
@@ -132,7 +190,6 @@ width: 10%;
 <nav id="main_menu">
 	<ul>
 		<li><a href="#">Главная</a></li>
-		<li><a href="#">Кабинет</a></li>
 		<li><a href="#">Материалы</a></li>
 		<li><a href="#">Контакты</a></li>
 	</ul>
@@ -149,6 +206,25 @@ width: 10%;
 		<li><a href="15.html">15</a></li>
 	</ul>
 </nav>
+
+
+<!--второе меню-->
+<nav id="second_small_menu">
+	<ul>
+		<li onclick="menu_op(0);"><a><</a></li>
+		<li id="1"><a  href="4.html">4</a></li>
+		<li id="2"><a  href="9.html">9</a></li>
+		<li id="3"><a  href="10.html">10</a></li>
+		<li id="4"><a  href="11.html">11</a></li>
+		<li id="5"><a  href="12.html">12</a></li>
+		<li id="6"><a href="14.html">14</a></li>
+		<li id="7"><a href="15.html">15</a></li>
+		<li id="8"><a  href="16.html">16</a></li>
+		<li onclick="menu_op(1);"><a>></a></li>	
+	</ul>
+</nav>
+<!--конец второго меню-->
+
 
 <h1 id="headline">Гласная в корне</h1>
 <br>
@@ -179,5 +255,25 @@ width: 10%;
 </a>
 
 </center>
+<script>
+num1=1
+num2=2
+for (var x=1; x<9; x++) {if (x!=num1 && x!=num2) {document.getElementById(x).style.display="none"}} 
+
+var menu_counter=1
+function menu_op(req) {
+if (req==0) {menu_counter=menu_counter-1;}
+if (req==1) {menu_counter=menu_counter+1;}
+if (menu_counter>4) {menu_counter=1}
+if (menu_counter<1) {menu_counter=3}
+console.log(menu_counter)
+num1=menu_counter*2-1
+num2=menu_counter*2
+
+for (var x=1; x<9; x++) {
+document.getElementById(x).style.display="inline-block"
+if (x!=num1 && x!=num2) {document.getElementById(x).style.display="none"}} 
+}
+</script>
 </body>
 </html>
