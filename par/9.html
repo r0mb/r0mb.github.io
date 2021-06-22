@@ -1,0 +1,180 @@
+<html>
+<head>
+
+<style>
+@font-face {
+font-family: 'Forum';
+src: url("Forum-Regular.ttf") format("truetype");
+font-style: normal; 
+font-weight: normal; 
+}
+
+body {
+background: linear-gradient(45deg, rgb(207,205,212), rgb(255,255,255));
+
+}
+
+<!--МЕНЮ-->
+
+
+
+
+#main_menu, #second_menu {font-family:'Forum'}
+
+#main_menu {
+	width: 80%;
+	background-color: rgb(235,234,239);
+}
+
+#second_menu {
+	width: 90%;
+	margin-top: 0.2%;
+	background-color: rgb(235,234,239);
+}
+				
+
+#main_menu ul, #second_menu ul {
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+}
+				
+			
+#main_menu ul li {
+	margin: 0px -7px 0 0;
+	display:inline-block;
+	width: 24%;
+	background-color: rgb(235,234,239);
+}
+
+#second_menu ul li {
+	margin: 0 0px 0 0;
+	display:inline-block;
+	width: 13%;
+	background-color: rgb(235,234,239);
+}
+
+#main_menu a, #second_menu a {
+	display:block;
+	padding:0 10px;
+	color:#000000;
+	font-size: 150%;
+	text-decoration:none;
+}
+#main_menu a {margin-right: 3px;}
+			
+#main_menu a:hover, #second_menu a:hover {
+
+	text-decoration: underline;
+	border: solid 1px black;
+}
+
+#chosen {
+border:solid 1px black;
+}
+
+
+#headline {
+	text-decoration: underline;
+	font-size: 200%;
+	font-family:'Forum';
+}
+#word {
+	font-size: 400%;
+	font-family:'Forum';
+}
+#score {
+	font-size: 200%;
+	font-family:'Forum';
+}
+
+#options {
+width: 70%;
+}
+#options td {width: 32%; text-align: center; border: solid 1px black; border-radius: 10px; font-family: 'Forum'}
+
+#outer {
+width: 30%;
+border: solid 1px black;
+height: 30px;
+}
+
+
+#inner {
+width: 95%;
+height: 100%;
+float:left;
+background-color: black;
+}
+
+#hint {
+font-family:'Forum';
+font-size: 120%;
+border: solid 1px black;
+border-radius: 10px;
+width: 10%;
+}
+
+   #banner {
+    color: #fff; 
+	width: 100%;
+   }
+</style>
+
+</head>
+<!---------->
+<body>
+<center>
+
+
+<nav id="main_menu">
+	<ul>
+		<li><a href="#">Главная</a></li>
+		<li><a href="#">Кабинет</a></li>
+		<li><a href="#">Материалы</a></li>
+		<li><a href="#">Контакты</a></li>
+	</ul>
+</nav>
+
+<nav id="second_menu">
+	<ul>
+		<li><a href="4.html">4</a></li>
+		<li id="chosen"><a href="9.html">9</a></li>
+		<li><a href="#">10</a></li>
+		<li><a href="#">11</a></li>
+		<li><a href="#">12</a></li>
+		<li><a href="#">14</a></li>
+		<li><a href="#">15</a></li>
+	</ul>
+</nav>
+
+<h1 id="headline">Гласная в корне</h1>
+<br>
+<h1 id="word">загорать</h1>
+
+<table id="options">
+    <tr>
+        <td>Чередующаяся</td>
+        <td>Проверяемая</td>
+        <td>Непроверяемая</td>
+    </tr>
+</table>
+
+<br>
+<h1 id="score">95/5</h1>
+
+<div id="outer">
+<div id="inner">
+</div>
+</div>
+
+<div><p id="hint">Подсказка</p></div>
+
+<div id="banner">
+<img src="https://popsters.ru/blog/content/7/24.png">
+</div>
+
+</center>
+</body>
+</html>
