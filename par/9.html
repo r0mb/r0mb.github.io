@@ -70,51 +70,7 @@ background: linear-gradient(45deg, rgb(207,205,212), rgb(255,255,255));
 	border: solid 1px black;
 }
 
-<!--настройка второго меню-->
 
- #second_small_menu {font-family:'Forum'}
-
-
-
-#second_small_menu {
-	width: 33%;
-	background-color: rgb(235,234,239);
-	border: solid 1px rgb(235,234,239);
-	border-radius: 10px;
-	margin-top: 0.4%;
-}
-				
-
-#second_small_menu ul {
-	padding:0;
-	margin:0;
-	list-style: none;
-	position: relative;
-}
-
-#second_small_menu ul li {
-	margin: 0 0px 0 0;
-	display:inline-block;
-	width: 20%;
-	background-color: rgb(235,234,239);
-}
-
-#second_small_menu a {
-	display:block;
-	padding:0 10px;
-	color:#000000;
-	font-size: 200%;
-	text-decoration:none;
-}
-
-			
-#second_small_menu a:hover {
-
-	text-decoration: underline;
-	border: solid 1px black;
-}
-
-<!--конец настройки второго меню-->
 
 
 #chosen {
@@ -208,22 +164,6 @@ width: 10%;
 </nav>
 
 
-<!--второе меню-->
-<nav id="second_small_menu">
-	<ul>
-		<li onclick="menu_op(0);"><a><</a></li>
-		<li id="1"><a  href="4.html">4</a></li>
-		<li id="2"><a  href="9.html">9</a></li>
-		<li id="3"><a  href="10.html">10</a></li>
-		<li id="4"><a  href="11.html">11</a></li>
-		<li id="5"><a  href="12.html">12</a></li>
-		<li id="6"><a href="14.html">14</a></li>
-		<li id="7"><a href="15.html">15</a></li>
-		<li id="8"><a  href="16.html">16</a></li>
-		<li onclick="menu_op(1);"><a>></a></li>	
-	</ul>
-</nav>
-<!--конец второго меню-->
 
 
 <h1 id="headline">Гласная в корне</h1>
@@ -246,7 +186,7 @@ width: 10%;
 </div>
 </div>
 
-<div><p id="hint">Подсказка</p></div>
+<div onclick="show();"><p  id="hint">Подсказка</p></div>
 
 <a href="https://yandex.ru/">
 <div id="banner">
@@ -254,26 +194,19 @@ width: 10%;
 </div>
 </a>
 
+<div id="hint_inside" style="position: fixed; top: 15%; width: 70%; left: 15%; border: solid 1px black; background-color: white; height: 70%; font-family: 'Forum'">
+
+<h1>Чередование</h1>
+<br>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rutrum sit amet elit non feugiat. Duis turpis nisi, accumsan vel quam nec, laoreet vehicula libero. Mauris id maximus felis. Aenean laoreet euismod nisl a posuere. Phasellus pharetra dictum tortor. Sed elit lectus, fermentum sed porta auctor, euismod non nunc. Nam a orci enim. Nulla venenatis, massa id luctus porttitor, arcu ante dapibus dui, id viverra magna dui a felis. Suspendisse vestibulum nibh eget efficitur eleifend. Nunc condimentum imperdiet erat. In turpis tortor, tempus venenatis ullamcorper eu, feugiat a sem. Donec commodo dui consequat, dictum libero eget, placerat nibh.</p>
+<p style="position: absolute; left: 40%; bottom: 0; border: solid 1px black; border-radius: 10px; text-align: center; width: 20%;" onclick="hide();">Спрятать подсказку</p>
+</div>
+
 </center>
 <script>
-num1=1
-num2=2
-for (var x=1; x<9; x++) {if (x!=num1 && x!=num2) {document.getElementById(x).style.display="none"}} 
-
-var menu_counter=1
-function menu_op(req) {
-if (req==0) {menu_counter=menu_counter-1;}
-if (req==1) {menu_counter=menu_counter+1;}
-if (menu_counter>4) {menu_counter=1}
-if (menu_counter<1) {menu_counter=3}
-console.log(menu_counter)
-num1=menu_counter*2-1
-num2=menu_counter*2
-
-for (var x=1; x<9; x++) {
-document.getElementById(x).style.display="inline-block"
-if (x!=num1 && x!=num2) {document.getElementById(x).style.display="none"}} 
-}
+document.getElementById("hint_inside").style.display="none"
+function hide() {document.getElementById("hint_inside").style.display="none"}
+function show() {document.getElementById("hint_inside").style.display="block"; console.log("works")}
 </script>
 </body>
 </html>
