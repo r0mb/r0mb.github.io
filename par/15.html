@@ -81,7 +81,7 @@ border:solid 1px black;
 	font-family:'Forum';
 }
 #word {
-	font-size: 400%;
+	font-size: 300%;
 	font-family:'Forum';
 }
 #score {
@@ -89,7 +89,7 @@ border:solid 1px black;
 	font-family:'Forum';
 }
 #options {width: 70%;}
-#options td {width: 49%; text-align: center; border: solid 1px black; border-radius: 10px; font-family: 'Forum'}
+#options td {width: 49%; text-align: center; border: solid 1px black; border-radius: 10px; font-family: 'Forum'; font-size: 160%}
 
 #outer {
 width: 30%;
@@ -106,10 +106,10 @@ background-color: black;
 
 #hint {
 font-family:'Forum';
-font-size: 120%;
 border: solid 1px black;
 border-radius: 10px;
-width: 10%;
+font-size: 120%;
+width: 18%;
 }
 
    #banner {
@@ -138,23 +138,18 @@ width: 10%;
 	<ul>
 		<li><a href="4.html">4</a></li>
 		<li><a href="9.html">9</a></li>
-		<li id="chosen"><a href="10.html">10</a></li>
+		<li><a href="10.html">10</a></li>
 		<li><a href="11.html">11</a></li>
 		<li><a href="12.html">12</a></li>
-		<li><a href="14.html">14</a></li>
+		<li id="chosen"><a href="14.html">14</a></li>
 		<li><a href="15.html">15</a></li>
 	</ul>
 </nav>
 
-<h1 id="headline">Правописание приставок</h1>
+<h1 id="headline">Отметьте пропуски с -НН-</h1>
 <br>
-<h1 id="word">пр_образовывать</h1>
-<table id="options">
-    <tr>
-        <td>Е</td>
-        <td>И</td>
-    </tr>
-</table>
+<h1 id="word">Впереди виднеется слома__ая листве__ица, серебря__ый в инее пень, значит, – мне в следующий дом</h1>
+
 
 <br>
 <h1 id="score">95/5</h1>
@@ -164,7 +159,7 @@ width: 10%;
 </div>
 </div>
 
-<div><p id="hint">Подсказка</p></div>
+<div  ><p id="hint" >Подсказка</p></div>
 
 <a href="https://yandex.ru/">
 <div id="banner">
@@ -172,5 +167,15 @@ width: 10%;
 </div>
 </a>
 </center>
+
+
+<script>
+function select(option_id) {
+if (option_id.id[0]==1) {for (var i=0; i<3; i++) {document.getElementsByClassName("options1")[i].style.border="solid 1px black"}}
+if (option_id.id[0]==2) {for (var i=0; i<3; i++) {document.getElementsByClassName("options2")[i].style.border="solid 1px black"}}
+console.log(document.getElementById(option_id.id).style.border="solid 3px black")
+}
+</script>
+
 </body>
 </html>
